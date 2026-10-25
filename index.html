@@ -22,6 +22,10 @@ gtag('config', 'G-6Z1EBCJ04M');
 <meta name="twitter:description" content="Free career and benefits tools for people on SSI and SSDI who want to work, provided by Prestige Path Consulting.">
 <link rel="canonical" href="https://www.powerscopellc.com/">
 <meta property="og:url" content="https://www.powerscopellc.com/">
+<meta property="og:image" content="https://www.powerscopellc.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://www.powerscopellc.com/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#140387">
@@ -53,6 +57,7 @@ gtag('config', 'G-6Z1EBCJ04M');
   body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.02rem}
   a{color:var(--navy)}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  [id]{scroll-margin-top:92px}
 
   /* Scroll reveal (JS-gated so content is never hidden without JS) */
   .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
@@ -154,11 +159,32 @@ gtag('config', 'G-6Z1EBCJ04M');
   footer .fine{width:100%;color:#8f96c8;font-size:.8rem;margin-top:8px}
 
   @media (max-width:760px){
+    body{overflow-x:clip}
+    /* Header scrolls away on mobile (was sticky + wrapping, eating the screen) */
+    header{position:static}
+    [id]{scroll-margin-top:14px}
+    .wrap{padding:0 18px}
+    .nav{padding:10px 0 2px;gap:8px}
+    .brand .name{font-size:1.15rem}
+    nav{width:100%}
+    nav ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;padding:4px 2px 8px;scrollbar-width:none}
+    nav ul::-webkit-scrollbar{display:none}
+    nav ul li{flex:0 0 auto}
+    nav a{display:inline-block;white-space:nowrap;padding:6px 12px;background:rgba(255,255,255,.10);border-radius:999px;font-size:.9rem}
+    section{padding:52px 0}
+    .hero-inner{padding:60px 0 56px}
+    .hero h1{font-size:2.15rem}
+    .hero .cta-row .btn{flex:1 1 100%;text-align:center}
+    .featured .ways a{flex:1 1 100%;text-align:center}
     .moment{grid-template-columns:1fr;gap:14px;padding:32px 0}
     .moment.flip .moment-line{order:0}
     .duo{grid-template-columns:1fr}
+    .amounts{padding:24px 20px}
     .amounts .cols{grid-template-columns:1fr}
-    nav ul{gap:14px}
+    .amounts table{font-size:.93rem}
+    .amounts th,.amounts td{padding:8px}
+    .contact-card{padding:22px}
+    footer{padding:30px 0}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
