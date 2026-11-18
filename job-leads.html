@@ -20,22 +20,27 @@ gtag('config', 'G-6Z1EBCJ04M');
 <meta property="og:type" content="website">
 <style>
   :root{
-    --navy:#140387;
-    --navy-deep:#0d0259;
-    --red:#A40E00;
-    --red-bright:#c21300;
-    --neutral:#EDEFF7;
-    --ink:#1c1c28;
-    --muted:#54546a;
-    --line:#e1e1ee;
+    --bg:#F7F7F5;
+    --surface:#ffffff;
+    --ink:#1D1D1F;
+    --muted:#6E6E73;
+    --line:#D6D6D2;
+    --accent:#4285F4;
+    --accent-dark:#3367D6;
+    --accent-soft:#E8F0FE;
+    --navy:#1D1D1F;
+    --navy-deep:#1D1D1F;
+    --red:#4285F4;
+    --red-bright:#3367D6;
+    --neutral:#F7F7F5;
     --white:#ffffff;
     --radius:16px;
-    --shadow:0 2px 10px rgba(20,3,135,.05);
-    --shadow-lg:0 14px 40px rgba(20,3,135,.13);
+    --shadow:0 2px 10px rgba(29,29,31,.05);
+    --shadow-lg:0 14px 40px rgba(29,29,31,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--white);-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg);-webkit-font-smoothing:antialiased}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
   a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:6px}
   .skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:10px 18px;z-index:50;border-radius:0 0 10px 0}
@@ -47,13 +52,13 @@ gtag('config', 'G-6Z1EBCJ04M');
   .brand{font-weight:800;color:var(--navy);font-size:18px;text-decoration:none;white-space:nowrap}
   .brand span{color:var(--red)}
   .nav-right{display:flex;align-items:center;gap:12px}
-  .soon-pill{background:var(--neutral);color:var(--navy);border:1px solid #cfcfe4;border-radius:999px;
+  .soon-pill{background:var(--surface);color:var(--navy);border:1px solid var(--line);border-radius:999px;
              font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:6px 13px;white-space:nowrap}
 
   /* ---------- Buttons ---------- */
   .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;
        padding:14px 30px;border-radius:12px;font-size:16px;border:none;cursor:pointer;
-       box-shadow:0 6px 18px rgba(164,14,0,.22);transition:transform .15s ease,background .15s ease}
+       box-shadow:0 6px 18px rgba(66,133,244,.25);transition:transform .15s ease,background .15s ease}
   .btn:hover{background:var(--red-bright);transform:translateY(-1px)}
   .btn.ghost{background:var(--white);color:var(--navy);border:2px solid var(--navy);box-shadow:none}
   .btn.ghost:hover{background:var(--neutral)}
@@ -63,11 +68,11 @@ gtag('config', 'G-6Z1EBCJ04M');
 
   /* ---------- Hero ---------- */
   header.hero{background:
-      radial-gradient(700px 340px at 85% -60px,rgba(164,14,0,.08),transparent 60%),
-      radial-gradient(800px 420px at 8% -120px,rgba(20,3,135,.10),transparent 60%),
+      radial-gradient(700px 340px at 85% -60px,rgba(66,133,244,.10),transparent 60%),
+      radial-gradient(800px 420px at 8% -120px,rgba(66,133,244,.08),transparent 60%),
       linear-gradient(180deg,var(--neutral) 0%,var(--white) 100%);
     padding:74px 0 58px;text-align:center}
-  .kicker{color:var(--red);font-weight:800;letter-spacing:2.5px;font-size:13px;text-transform:uppercase;margin-bottom:16px}
+  .kicker{color:var(--accent-dark);font-weight:800;letter-spacing:2.5px;font-size:13px;text-transform:uppercase;margin-bottom:16px}
   h1{color:var(--navy);font-size:clamp(31px,5.4vw,48px);line-height:1.13;margin-bottom:18px;font-weight:800;letter-spacing:-.5px}
   h1 .hl{color:var(--red)}
   .lede{font-size:19px;color:var(--muted);max-width:660px;margin:0 auto 28px}
@@ -75,12 +80,12 @@ gtag('config', 'G-6Z1EBCJ04M');
   .launch-note{margin-top:16px;font-size:14px;color:var(--muted)}
   .launch-note strong{color:var(--navy)}
   .trust{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:30px}
-  .trust span{background:var(--white);border:1px solid #d5d5e8;border-radius:999px;padding:8px 15px;font-size:14px;color:var(--navy);font-weight:600}
+  .trust span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--navy);font-weight:600}
   .trust span::before{content:"✓ ";color:var(--red);font-weight:800}
 
   /* ---------- Sections ---------- */
   section{padding:60px 0}
-  section.alt{background:var(--neutral)}
+  section.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   h2{color:var(--navy);font-size:clamp(25px,3.6vw,31px);margin-bottom:14px;font-weight:800;text-align:center;letter-spacing:-.3px}
   .sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 38px;font-size:17px}
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
@@ -104,7 +109,7 @@ gtag('config', 'G-6Z1EBCJ04M');
   .sample-meta{color:var(--muted);font-size:14px;margin-bottom:8px}
   .sample-fit{font-size:15px;color:var(--ink);background:var(--neutral);border-radius:10px;padding:10px 14px;margin-bottom:12px}
   .sample-fit strong{color:var(--navy)}
-  .sample-link{display:inline-block;color:var(--red);font-weight:700;text-decoration:none;font-size:15px}
+  .sample-link{display:inline-block;color:var(--accent-dark);font-weight:700;text-decoration:none;font-size:15px}
   .sample-link:hover{text-decoration:underline}
   .sample-caption{text-align:center;color:var(--muted);font-size:14px;margin-top:16px}
 
@@ -116,12 +121,12 @@ gtag('config', 'G-6Z1EBCJ04M');
   .checks li strong{color:var(--navy)}
 
   /* ---------- Pricing ---------- */
-  .planned-banner{max-width:680px;margin:0 auto 30px;background:#fff7f5;border:1.5px dashed var(--red);border-radius:12px;
+  .planned-banner{max-width:680px;margin:0 auto 30px;background:var(--accent-soft);border:1.5px dashed var(--accent);border-radius:12px;
                   padding:14px 20px;text-align:center;color:var(--ink);font-size:15px}
-  .planned-banner strong{color:var(--red)}
+  .planned-banner strong{color:var(--accent-dark)}
   .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:700px;margin:0 auto}
   .price-card{background:var(--white);border:2px solid var(--line);border-radius:18px;padding:36px 32px;text-align:center;position:relative}
-  .price-card.featured{border-color:var(--red);box-shadow:0 10px 30px rgba(164,14,0,.13)}
+  .price-card.featured{border-color:var(--accent);box-shadow:0 10px 30px rgba(66,133,244,.15)}
   .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;
          font-size:12px;font-weight:800;letter-spacing:1px;padding:5px 14px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
   .plan-label{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
@@ -144,12 +149,12 @@ gtag('config', 'G-6Z1EBCJ04M');
   .faq details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
   .faq summary{font-weight:700;color:var(--navy);cursor:pointer;font-size:16px}
   .faq p{margin-top:10px;color:var(--muted);font-size:15px}
-  .faq a{color:var(--red);font-weight:600}
+  .faq a{color:var(--accent-dark);font-weight:600}
 
   /* ---------- CTA band & footer ---------- */
-  .cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;text-align:center;padding:66px 0}
-  .cta-band h2{color:#fff}
-  .cta-band p{color:#cfcdf0;max-width:580px;margin:0 auto 28px;font-size:17px}
+  .cta-band{background:var(--surface);border-top:1px solid var(--line);color:var(--ink);text-align:center;padding:66px 0}
+  .cta-band h2{color:var(--ink)}
+  .cta-band p{color:var(--muted);max-width:580px;margin:0 auto 28px;font-size:17px}
   footer{padding:36px 0;color:var(--muted);font-size:14px;text-align:center;line-height:1.9}
   footer strong{color:var(--navy)}
   footer a{color:var(--navy);font-weight:600;text-decoration:none}
@@ -272,7 +277,7 @@ gtag('config', 'G-6Z1EBCJ04M');
     <h2>Powered by a real employer database</h2>
     <p class="sub">Your leads don't come from a scraped list. They come from our database of 385 verified Georgia employers — hiring contacts and openings re-checked on a regular cycle — matched to what you tell us you want.</p>
     <div style="text-align:center;margin-top:8px">
-      <img src="employer-db-sample.png" alt="Sample of the 385-employer Georgia database behind the job leads" loading="lazy" style="max-width:100%;border:1px solid #dcdcec;border-radius:12px;box-shadow:0 2px 10px rgba(20,3,135,.06)">
+      <img src="employer-db-sample.png" alt="Sample of the 385-employer Georgia database behind the job leads" loading="lazy" style="max-width:100%;border:1px solid #D6D6D2;border-radius:12px;box-shadow:0 2px 10px rgba(29,29,31,.06)">
     </div>
   </div>
 </section>
